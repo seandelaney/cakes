@@ -1,0 +1,21 @@
+{
+	"env": {
+    	"node": true,
+    	"browser": true
+    },
+	"parser": "babel-eslint",
+	"plugins": [
+		"react"
+	],
+	"extends": [
+		"airbnb-base"
+	],
+	"rules": {
+		"no-tabs": 0,
+		"no-unused-vars": 0,
+		"indent": [2, "tab"],
+		"max-len": 0,
+		"import/extensions": "off",
+		"import/no-unresolved": "off"
+	}
+}

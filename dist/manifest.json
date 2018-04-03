@@ -1,0 +1,8 @@
+{
+	"name": "Cakes",
+	"short_name": "Cakes",
+	"start_url": ".",
+	"display": "standalone",
+	"background_color": "#fff",
+	"description": "It’s all about cakes! A very simple CRUD app built using Webpack, Babel and React that allows a user to manage a list of their favourite cakes."
+}

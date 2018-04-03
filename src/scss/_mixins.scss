@@ -1,0 +1,86 @@
+@function calculateRem($size) {
+	$remSize: $size / 16px;
+	
+	@return $remSize * 1rem;
+}
+
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder {@content}
+	::-moz-placeholder {@content}
+	:-ms-input-placeholder {@content}
+}
+
+@mixin font-size($size) {
+	font-size: $size;
+	font-size: calculateRem($size);
+}
+
+@mixin transform($args...) {
+	-webkit-transform: $args;
+	-moz-transform: $args;
+	-ms-transform: $args;
+	-o-transform: $args;
+	transform: $args;
+}
+
+@mixin transform-origin($args...) {
+	-webkit-transform-origin: $args;
+	-moz-transform-origin: $args;
+	-ms-transform-origin: $args;
+	-o-transform-origin: $args;
+	transform-origin: $args;
+}
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+	filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin border-top-left-radius($args...) {
+	-webkit-border-top-left-radius: $args;
+	-moz-border-radius-topleft: $args;
+	border-top-left-radius: $args;
+}
+
+@mixin border-bottom-left-radius($args...) {
+	-webkit-border-bottom-left-radius: $args;
+	-moz-border-radius-bottomleft: $args;
+	border-bottom-left-radius: $args;
+}
+
+@mixin border-top-right-radius($args...) {
+	-webkit-border-top-right-radius: $args;
+	-moz-border-radius-topright: $args;
+	border-top-right-radius: $args;
+}
+
+@mixin border-bottom-right-radius($args...) {
+	-webkit-border-bottom-right-radius: $args;
+	-moz-border-radius-bottomright: $args;
+	border-bottom-right-radius: $args;
+}
+
+@mixin border-radius($args...) {
+	-webkit-border-top-left-radius: $args;
+	-webkit-border-bottom-left-radius: $args;
+	-webkit-border-top-right-radius: $args;
+	-webkit-border-bottom-right-radius: $args;
+	-moz-border-radius-topleft: $args;
+	-moz-border-radius-bottomleft: $args;
+	-moz-border-radius-topright: $args;
+	-moz-border-radius-bottomright: $args;
+	border-top-left-radius: $args;
+	border-bottom-left-radius: $args;
+	border-top-right-radius: $args;
+	border-bottom-right-radius: $args;
+}
