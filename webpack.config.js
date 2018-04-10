@@ -16,6 +16,12 @@ module.exports = (env, options) => {
 	    entry: [
 			'./src/index.jsx'
 		],
+		output: {
+			publicPath: '/'
+		},
+		devServer: {
+			historyApiFallback: true
+		},
 	    module: {
 			rules: [{
 				test: /\.(js|jsx)$/,
