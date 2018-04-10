@@ -1,6 +1,6 @@
 {
 	"name": "cakes",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "It’s all about cakes! A very simple CRUD app built using Webpack, Babel and React that allows a user to manage a list of their favourite cakes.",
 	"main": "src/index.jsx",
 	"scripts": {
