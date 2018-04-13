@@ -3,11 +3,12 @@
 (() => {
 	const staticFilesToCache = [
 		'index.html',
-		'offline.html',
+		'404.html',
 		'main.css',
 		'main.js',
 		'vendors.js',
-		'service-worker.js'
+		'scripts.js',
+		'service-worker.js',
 	];
 	
 	/* Will use cache, falling back to network. */
@@ -29,7 +30,7 @@
 	self.addEventListener('activate', event => {
 		const cacheWhitelist = [
 			staticCaches, 
-			apiCaches
+			apiCaches,
 		];
 
 		event.waitUntil(

@@ -1,11 +1,13 @@
 {
 	"name": "cakes",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "It’s all about cakes! A very simple CRUD app built using Webpack, Babel and React that allows a user to manage a list of their favourite cakes.",
 	"main": "src/index.jsx",
 	"scripts": {
-		"dev": "NODE_ENV='development' webpack-dev-server --mode development --open --hot",
-		"prod": "NODE_ENV='production' webpack --mode production"
+		"dev": "npm run development",
+		"development": "NODE_ENV='development' webpack-dev-server --progress=true --watch --open --hot=true --display-error-details=true --mode=development",
+		"prod": "npm run production",
+		"production": "NODE_ENV='production' webpack --progress=false --hide-modules --mode=production"
 	},
 	"keywords": [
 		"Cakes",
@@ -38,6 +40,7 @@
 		"babel-preset-react": "^6.24.1",
 		"babel-preset-stage-2": "^6.24.1",
 		"clean-webpack-plugin": "^0.1.19",
+		"css-hot-loader": "^1.3.9",
 		"css-loader": "^0.28.11",
 		"eslint": "^4.19.1",
 		"eslint-config-airbnb": "^16.1.0",
@@ -52,8 +55,9 @@
 		"image-webpack-loader": "^4.2.0",
 		"imports-loader": "^0.8.0",
 		"jquery": "^3.3.1",
-		"mini-css-extract-plugin": "^0.2.0",
+		"mini-css-extract-plugin": "^0.4.0",
 		"node-sass": "^4.8.3",
+		"optimize-css-assets-webpack-plugin": "^4.0.0",
 		"popper.js": "^1.14.3",
 		"postcss-loader": "^2.1.3",
 		"precss": "^3.1.2",
